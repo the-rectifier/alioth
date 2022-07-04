@@ -13,10 +13,18 @@ module.exports = {
     async execute(interaction) {
         const ctf = interaction.options.data[0].value;
 
-        if (interaction.user.id == '579303429445517322') {
-            await interaction.reply('Άντα μπου κάμνεις ρε σιυλλόπελλε!?!?');
+        const adminRole = await interaction.guild.roles.cache.find(role => role.name === 'Admin');
+        const userId = await interaction.member.id;
+
+        if (!adminRole.members.has(userId)) {
+            await interaction.reply('Ε παρέα σάννα τζαι έφυε σου νάκκον!!');
             return;
         }
+
+        // if (interaction.user. {
+        //     await interaction.reply('Άντα μπου κάμνεις ρε σιυλλόπελλε!?!?');
+        //     return;
+        // }
 
         // console.log(interaction.user.id);
 

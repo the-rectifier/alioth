@@ -6,10 +6,12 @@
 
 ### CTF Related
 
-- [ ] Create Join Mechanism
+- [X] Create Join Mechanism
   - [X] CTF Roles
   - [X] Create CTF Category
-  - [ ] Create only avaiable to select Roles
+  - [X] Create only avaiable to select Roles
+  - [X] Cannot Join a CTF already joined
+  - [ ] Cannot Create CTF already created
 - [ ] Create Challenge Channel
 - [ ] Attempt Challenge
 - [ ] Create CTF Solving Mechanism
@@ -29,3 +31,7 @@
 
 - [ ] Create Polls
 - [ ] Ban Users
+
+### MongoDB
+
+- [ ] For all of the above implement a MongoDB mechanism

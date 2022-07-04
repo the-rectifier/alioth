@@ -6,7 +6,6 @@ const { MongoClient } = require('mongodb');
 
 const dbclient = new MongoClient(`mongodb://${dbUser}:${dbPassword}@localhost:27017`, { useNewUrlParser: true });
 
-console.log(dbclient);
 
 const client = new Client({
 	intents: [
@@ -72,14 +71,12 @@ client.on("interactionCreate", async (interaction) => {
 });
 
 
-const db = dbclient.connect(async (err, client) => {
-	if (err)
-		throw err;
-	console.log("Connected to DB!");
-	var db = client.db("ctfs");
-	return db;
-});
+// const db = dbclient.connect(async (err, client) => {
+// 	if (err)
+// 		throw err;
+// 	console.log("Connected to DB!");
+// 	var db = client.db("ctfs");
+// });
 
 
 client.login(token);
-console.log(db);
