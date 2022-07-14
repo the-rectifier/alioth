@@ -57,7 +57,7 @@ module.exports = {
         const generalId = general.id;
 
 
-        await interaction.reply('Έγλεπε ρε Τσίου, τζαι \'ννα πετάσομεν τωρά!!!');
+        await interaction.reply('Έγλεπε ρε Τσούι, τζαι \'ννα πετάσομεν τωρά!!!');
 
         const ctfData = {
             name: ctf,
