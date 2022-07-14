@@ -4,9 +4,6 @@ const { Client, Collection, Intents } = require("discord.js");
 const { clientId, token, dbPassword, dbUser } = require("./config.json");
 const { MongoClient } = require('mongodb');
 
-const dbclient = new MongoClient(`mongodb://${dbUser}:${dbPassword}@localhost:27017`, { useNewUrlParser: true });
-
-
 const client = new Client({
 	intents: [
 		Intents.FLAGS.GUILDS,
@@ -69,14 +66,5 @@ client.on("interactionCreate", async (interaction) => {
 		});
 	}
 });
-
-
-// const db = dbclient.connect(async (err, client) => {
-// 	if (err)
-// 		throw err;
-// 	console.log("Connected to DB!");
-// 	var db = client.db("ctfs");
-// });
-
 
 client.login(token);
