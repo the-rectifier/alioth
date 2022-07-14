@@ -12,7 +12,7 @@ module.exports = {
         .setDMPermission(false),
     async execute(interaction) {
         const ctf = await interaction.options.data[0].value;
-        const ctfs = await interaction.guild.roles.cache.find(role => role.name === `'team-${ctf}'`);
+        const ctfs = await interaction.guild.roles.cache.find(role => role.name === `team-${ctf}`);
         // console.log(ctfs);
 
         if (ctfs === undefined) {
