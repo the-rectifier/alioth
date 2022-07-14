@@ -29,7 +29,7 @@ module.exports = {
         // console.log(interaction.user.id);
 
         const role = await interaction.guild.roles.create({
-            name: `'team-${ctf}'`,
+            name: `team-${ctf}`,
             color: '#222b3a',
         });
 
@@ -57,7 +57,7 @@ module.exports = {
         const generalId = general.id;
 
 
-        await interaction.reply(`'Ε Κουλλή, βάρτες σιεφταλιές πάνω ρεεε τζαι έσιει CTF: ${ctf}!!'`);
+        await interaction.reply(`Ε Κουλλή, βάρτες σιεφταλιές πάνω ρεεε τζαι έσιει CTF!!: ${ctf}`);
 
         const ctfData = {
             name: ctf,
