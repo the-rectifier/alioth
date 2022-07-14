@@ -42,6 +42,11 @@ module.exports = {
                     id: interaction.guild.roles.everyone,
                     allow: [],
                     deny: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
+                },
+                {
+                    id: role,
+                    allow: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
+                    deny: [],
                 }
             ]
         });
@@ -50,6 +55,19 @@ module.exports = {
         const general = await interaction.guild.channels.create('general', {
             type: "GUILD_TEXT",
             parent: channel.id,
+            private: true,
+            permissionOverwrites: [
+                {
+                    id: role,
+                    allow: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
+                    deny: [],
+                },
+                {
+                    id: interaction.guild.roles.everyone,
+                    allow: [],
+                    deny: ['VIEW_CHANNEL', 'SEND_MESSAGES'],
+                },
+            ],
         });
 
         const channelId = channel.id;
